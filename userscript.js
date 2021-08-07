@@ -29,8 +29,6 @@
         var img = document.createElement("img");
         img.src = cardFlagLink;
         var src = document.getElementById("deck-single-card");
-        var fileWidth = img.width;
-        var fileHeight = img.height;
         src.appendChild(img);
         img.style.objectFit = "none";
     };
