@@ -15,11 +15,15 @@
 //  These vars are config
     var autoHideS2Box = true;
     var displayFullFlag = true;
-    var s1Redesign = true; // S1 Redesign everywhere can be found here: https://github.com/CatgirlCultist/s1-redesign/blob/main/userscript.js
+    var s1Redesign = false; // S1 Redesign everywhere can be found here: https://github.com/CatgirlCultist/s1-redesign/blob/main/userscript.js
 
     if (autoHideS2Box) {
-        var cardBox = document.getElementsByClassName("deckcard-title")[0];
-        cardBox.style.visibility = "hidden";
+        var s2Card = document.getElementsByClassName("deckcard deckcard-season-2 ");
+
+        for(var deckcard of s2Card) {
+            var cardBox = document.getElementsByClassName("deckcard-title")[0];
+            cardBox.style.visibility = "hidden";
+        }
     };
 
     if (displayFullFlag) {
